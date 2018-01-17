@@ -43,7 +43,7 @@ for (animal, leg) in numberOfLegs {
 
 //: Control Flows
 
-let legCount = numberOfLegs.first?.value
+let legCount = 1
 
 if legCount == 0 {
     
@@ -58,7 +58,7 @@ if legCount == 0 {
     print("It walks")
 }
 
-switch legCount! {
+switch legCount {
 case 0:
     print("It slides")
 case 1,3,5,7,9:
