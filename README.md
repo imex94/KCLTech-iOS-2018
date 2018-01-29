@@ -15,7 +15,9 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 103
 
-- Session 103 Slides
+- [Session 103 Slides](session103/session103_2018.pdf)
+- [Library Challenge](session103/Library.playground)
+- [Stanford - MVC](https://www.youtube.com/watch?v=4iGdu4IWMFc)
 
 ## Session 104
 
