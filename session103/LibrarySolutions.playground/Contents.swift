@@ -31,22 +31,16 @@ class Book {
 
 class Library {
     
-    var catalogue = ["ORW":Book("1985", "George Orwell"),
+    var catalogue = ["ORW":Book("1984", "George Orwell"),
                      "RAY":Book("Fahrenheit 451", "Ray Bradbury")]
     
     var checkedOutBooks = [String:Person]()
     
     func searchByTitle(_ title:String) -> String {
+        guard let (bookId, _) = catalogue.first(where: { $1.title == title }) else { return "Not in catalogue" }
+        guard let person = checkedOutBooks[bookId] else { return "Available" }
         
-        // TODO: This function searches the catalogue dictionary for a title
-        //
-        // Returns "Available" if the book exists and isn't checked out
-        //
-        // Returns "Checked out by "name" if the book exists and is checked out
-        //
-        // Returns "Not in catalogue" if the book doesn't exist
-        
-        return ""
+        return "Checked out by \(person.name!)"
     }
     
     func checkOut(_ bookId:String, _ person:Person) -> String {
@@ -87,7 +81,7 @@ let borrower1 = Person("Curious George")
 let borrower2 = Person("Mark Twain")
 
 // George searches for a book
-let searchResult = lib.searchByTitle("1985")
+let searchResult = lib.searchByTitle("1984")
 print(searchResult)
 
 // Expected Output in console:
@@ -101,7 +95,7 @@ print(borrowResult)
 // "Successfully checked out"
 
 // Mark searches for a book
-let searchResult2 = lib.searchByTitle("1985")
+let searchResult2 = lib.searchByTitle("1984")
 print(searchResult2)
 
 // Expected Output in console:
