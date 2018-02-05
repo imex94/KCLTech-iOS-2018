@@ -22,7 +22,8 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 104
 
-- iOS app - Part 1 - UI, Auto Layout
+- [iOS app - Part 1 - UI, Auto Layout](session104/)
+- [Assets - Part 1](session104/assets)
 
 ## Session 105
 
