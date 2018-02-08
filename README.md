@@ -24,7 +24,7 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 - [iOS app - Part 1a - UI, Auto Layout](session104/XMap)
 - [Assets - Part 1](session104/assets)
-- [Swift Cheat Sheet](session104/SwiftCheetSheat.pdf)
+- [Swift Cheat Sheet](session104/SwiftCheatSheet.pdf)
 - [Xcode Keyboard Shortcuts](session104/XcodeKeyboardShortcuts.pdf)
 
 ## Session 105
