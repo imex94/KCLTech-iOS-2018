@@ -22,25 +22,31 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 104
 
-- [iOS app - Part 1 - UI, Auto Layout](session104/)
+- [iOS app - Part 1a - UI, Auto Layout](session104/XMap)
 - [Assets - Part 1](session104/assets)
+- [Swift Cheat Sheet](session104/SwiftCheetSheat.pdf)
+- [Xcode Keyboard Shortcuts](session104/XcodeKeyboardShortcuts.pdf)
 
 ## Session 105
 
-- iOS app - Part 2 - Data & Parsing
+- iOS app - Part 1b - UI, Auto Layout
 
 ## Session 106
 
-- iOS app - Part 3 - Networking & Threading
+- iOS app - Part 1b - Data & Parsing
 
 ## Session 107
 
-- iOS app - Part 4 - Location
+- iOS app - Part 3 - Networking & Threading
 
 ## Session 108
 
-- iOS app - Part 5 - Put it all together
+- iOS app - Part 4 - Location
 
 ## Session 109
+
+- iOS app - Part 5 - Put it all together
+
+## Session 110
 
 - iOS app - Part 6 - ARKit
