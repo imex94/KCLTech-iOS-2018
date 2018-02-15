@@ -3,50 +3,46 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 [KCL Tech Slack (#ios-programming)](https://kcltechhq.slack.com)
 
-## Session 101
+## Session 101 (17th January)
 
 - [Session 101 Slides](session101/session101_2018.pdf)
 - [Introduction in Playground](session101/session101.playground)
 
-## Session 102
+## Session 102 (24th January)
 
 - [Session 102 Slides](session102/session102_2018.pdf)
 - [Intermediate Swift](session102/session102.playground)
 
-## Session 103
+## Session 103 (31st January)
 
 - [Session 103 Slides](session103/session103_2018.pdf)
 - [Library Challenge](session103/Library.playground)
 - [Library Challenge Solutions](session103/LibrarySolutions.playground)
 - [Stanford - MVC](https://www.youtube.com/watch?v=4iGdu4IWMFc)
 
-## Session 104
+## Session 104 (7th February)
 
 - [iOS app - Part 1a - UI, Auto Layout](session104/XMap)
 - [Assets - Part 1](session104/assets)
 - [Swift Cheat Sheet](session104/SwiftCheatSheet.pdf)
 - [Xcode Keyboard Shortcuts](session104/XcodeKeyboardShortcuts.pdf)
 
-## Session 105
+## Session 105 (14th February)
 
-- iOS app - Part 1b - UI, Auto Layout
+- [iOS app - Part 1b - UI, Auto Layout](session105/XMap)
 
-## Session 106
+## Session 106 (21st February)
 
-- iOS app - Part 1b - Data & Parsing
+- iOS app - Part 2 - Data & Parsing
 
-## Session 107
+## Session 107 (28th February)
 
 - iOS app - Part 3 - Networking & Threading
 
-## Session 108
+## Session 108 (7th March)
 
 - iOS app - Part 4 - Location
 
-## Session 109
+## Session 109 (14th March)
 
-- iOS app - Part 5 - Put it all together
-
-## Session 110
-
-- iOS app - Part 6 - ARKit
+- iOS app - Part 5 - ARKit
