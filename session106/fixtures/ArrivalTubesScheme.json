@@ -1,0 +1,9 @@
+[
+  {
+    "lineId": "String",
+    "platformName": "String",
+    "timeToStation": 0.0,
+    "towards": "String",
+    "timeToStation": 0.0
+  }
+]
