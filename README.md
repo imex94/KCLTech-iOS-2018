@@ -37,8 +37,8 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 107 (28th February)
 
-- iOS app - Part 4 - Location
+- iOS app - Part 3 - Location
 
 ## Session 108 (7th March)
 
-- iOS app - Part 5 - ARKit
+- iOS app - Part 4 - ARKit
