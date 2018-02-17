@@ -33,16 +33,12 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 106 (21st February)
 
-- iOS app - Part 2 - Data & Parsing
+- iOS app - Part 2 - Networking & Parsing
 
 ## Session 107 (28th February)
 
-- iOS app - Part 3 - Networking & Threading
-
-## Session 108 (7th March)
-
 - iOS app - Part 4 - Location
 
-## Session 109 (14th March)
+## Session 108 (7th March)
 
 - iOS app - Part 5 - ARKit
