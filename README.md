@@ -33,7 +33,7 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 106 (21st February)
 
-- iOS app - Part 2 - Networking & Parsing
+- [iOS app - Part 2 - Networking & Parsing](session106/XMap)
 - [JSON Fixtures](session106/fixtures)
 
 ## Session 107 (28th February)
