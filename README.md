@@ -31,15 +31,15 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 - [iOS app - Part 1b - UI, Auto Layout](session105/XMap)
 
-## Session 106 (21st February)
+## Session 106 (21st & 28th February)
 
 - [iOS app - Part 2 - Networking & Parsing](session106/XMap)
 - [JSON Fixtures](session106/fixtures)
 
-## Session 107 (28th February)
+## Session 107 (7th February)
 
 - iOS app - Part 3 - Location
 
-## Session 108 (7th March)
+## Session 108 (14th March)
 
 - iOS app - Part 4 - ARKit
