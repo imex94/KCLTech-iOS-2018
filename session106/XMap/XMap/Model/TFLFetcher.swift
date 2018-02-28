@@ -59,6 +59,14 @@ class TFLFetcher: NSObject {
             // Received Data for parsing
             // Do some work...Mahyad?
             
+            do {
+                let decoder = JSONDecoder()
+                let arrivalTube = try decoder.decode(ArrivalTube.self, from: responseJSON as! Data)
+                print(arrivalTube)
+            } catch {
+                print("fuck me")
+            }
+//            print(responseJSON)
             DispatchQueue.main.async {
                 handler?(responseJSON)
             }
