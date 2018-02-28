@@ -11,8 +11,8 @@ import UIKit
 class TFLFetcher: NSObject {
 
     // TODO - Parsing: These typealias responses should use the model files
-    typealias TFLFetcherStationsHandler = (Any) -> ()
-    typealias TFLFetcherArrivalHandler = (Any) -> ()
+    typealias TFLFetcherStationsHandler = ([Station]) -> ()
+    typealias TFLFetcherArrivalHandler = ([Tube]) -> ()
     
     class func fetchStations(at location: (Double, Double), handler: TFLFetcherStationsHandler? = nil) {
         
@@ -33,10 +33,21 @@ class TFLFetcher: NSObject {
         executor.execute { (responseJSON) in
             
             // Received Data for parsing
-            // Do some work...Mahyad?
+            
+            var parsedStations = [Station]()
+            guard let stations = responseJSON as? Dictionary<String,Any> else {return}
+            guard let stopPoints = stations["stopPoints"] as? Array<Any> else {return}
+            
+            
+            for station in stopPoints {
+                
+                if let stationData = try? JSONSerialization.data(withJSONObject: station, options: []), let nearbyStation = try? JSONDecoder().decode(Station.self, from: stationData) {
+                    parsedStations.append(nearbyStation)
+                }
+            }
             
             DispatchQueue.main.async {
-                handler?(responseJSON)
+                handler?(parsedStations)
             }
         }
     }
@@ -57,19 +68,19 @@ class TFLFetcher: NSObject {
         executor.execute { (responseJSON) in
             
             // Received Data for parsing
-            // Do some work...Mahyad?
+            guard let tubes = responseJSON as? Array<Any> else {return}
             
-            do {
-                let decoder = JSONDecoder()
-                let arrivalTube = try decoder.decode(ArrivalTube.self, from: responseJSON as! Data)
-                print(arrivalTube)
-            } catch {
-                print("fuck me")
+            var parsedTubes = [Tube]()
+            
+            for tube in tubes {
+                if let tubeData = try? JSONSerialization.data(withJSONObject: tube, options: []), let arrivalTube = try? JSONDecoder().decode(Tube.self, from: tubeData) {
+                    parsedTubes.append(arrivalTube)
+                }
             }
-//            print(responseJSON)
+            
             DispatchQueue.main.async {
-                handler?(responseJSON)
-            }
+                handler?(parsedTubes)
+            }  
         }
     }
 }

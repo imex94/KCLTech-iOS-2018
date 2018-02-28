@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct NearbyStation: Codable {
+struct Station: Codable {
     
     let commonName: String
     let distance: Double
     let lat: Double
-    let long: Double
+    let lon: Double
     let stationNaptan: String
 }

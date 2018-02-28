@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArrivalTube: Codable {
+struct Tube: Codable {
     
     let lineId: String
     let platformName: String
