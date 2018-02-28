@@ -11,8 +11,8 @@ import UIKit
 class TFLFetcher: NSObject {
 
     // TODO - Parsing: These typealias responses should use the model files
-    typealias TFLFetcherStationsHandler = (Any) -> ()
-    typealias TFLFetcherArrivalHandler = (Any) -> ()
+    typealias TFLFetcherStationsHandler = ([Station]) -> ()
+    typealias TFLFetcherArrivalHandler = ([Tube]) -> ()
     
     class func fetchStations(at location: (Double, Double), handler: TFLFetcherStationsHandler? = nil) {
         
@@ -35,10 +35,15 @@ class TFLFetcher: NSObject {
             // Received Data for parsing
             
             var parsedStations = [Station]()
+            guard let stations = responseJSON as? Dictionary<String,Any> else {return}
+            guard let stopPoints = stations["stopPoints"] as? Array<Any> else {return}
+            
+            
+            for station in stopPoints {
                 
-            if let stationData = try? JSONSerialization.data(withJSONObject: responseJSON, options: []), let nearbyStation = try? JSONDecoder().decode(Station.self, from: stationData) {
-                parsedStations.append(nearbyStation)
-                print(nearbyStation)
+                if let stationData = try? JSONSerialization.data(withJSONObject: station, options: []), let nearbyStation = try? JSONDecoder().decode(Station.self, from: stationData) {
+                    parsedStations.append(nearbyStation)
+                }
             }
             
             DispatchQueue.main.async {
