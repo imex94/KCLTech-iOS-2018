@@ -33,7 +33,16 @@ class TFLFetcher: NSObject {
         executor.execute { (responseJSON) in
             
             // Received Data for parsing
-            // Do some work...Mahyad?
+            guard let stations = responseJSON as? Array<Any> else {return}
+            
+            var parsedTubes = [Station]()
+            
+            for station in stations {
+                if let stationData = try? JSONSerialization.data(withJSONObject: station, options: []), let nearbyStation = try? JSONDecoder().decode(Station.self, from: stationData) {
+                    parsedTubes.append(nearbyStation)
+                    print(nearbyStation)
+                }
+            }
             
             DispatchQueue.main.async {
                 handler?(responseJSON)
@@ -57,19 +66,21 @@ class TFLFetcher: NSObject {
         executor.execute { (responseJSON) in
             
             // Received Data for parsing
-            // Do some work...Mahyad?
+            guard let tubes = responseJSON as? Array<Any> else {return}
             
-            do {
-                let decoder = JSONDecoder()
-                let arrivalTube = try decoder.decode(ArrivalTube.self, from: responseJSON as! Data)
-                print(arrivalTube)
-            } catch {
-                print("fuck me")
+            var parsedTubes = [Tube]()
+            
+            for tube in tubes {
+                if let tubeData = try? JSONSerialization.data(withJSONObject: tube, options: []), let arrivalTube = try? JSONDecoder().decode(Tube.self, from: tubeData) {
+                    parsedTubes.append(arrivalTube)
+                }
             }
-//            print(responseJSON)
+            
             DispatchQueue.main.async {
                 handler?(responseJSON)
             }
+            
+            return parsedTubes
         }
     }
 }

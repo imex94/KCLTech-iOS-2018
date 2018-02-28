@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NearbyStation: Codable {
+struct Station: Codable {
     
     let commonName: String
     let distance: Double
