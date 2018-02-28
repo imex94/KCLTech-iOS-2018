@@ -54,7 +54,7 @@ class MapViewController: UIViewController, UICollectionViewDelegate, UICollectio
         
         TFLFetcher.fetchStations(at: (51.512067, -0.116733)) { (response) in
             
-            print(response)
+            //print(response)
         }
     }
     
@@ -62,7 +62,7 @@ class MapViewController: UIViewController, UICollectionViewDelegate, UICollectio
         
         TFLFetcher.fetchArrivalTrains(for: "940GZZLUTMP") { (response) in
             
-            print(response)
+            //print(response)
         }
     }
 }
