@@ -10,9 +10,13 @@ import Foundation
 
 struct Station: Codable {
     
-    let commonName: String
-    let distance: Double
-    let lat: Double
-    let long: Double
-    let stationNaptan: String
+    struct StopPoint: Codable {
+        let commonName: String
+        let distance: Double
+        let lat: Double
+        let lon: Double
+        let stationNaptan: String
+    }
+    
+    let stopPoints : [StopPoint]
 }
