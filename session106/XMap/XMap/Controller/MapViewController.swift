@@ -21,6 +21,9 @@ class MapViewController: UIViewController, UICollectionViewDelegate, UICollectio
         collectionView.dataSource = self
         
         collectionView.register(UINib(nibName: TubeStationCollectionViewCell.identifier, bundle: Bundle.main), forCellWithReuseIdentifier: TubeStationCollectionViewCell.identifier)
+        
+        fetchStations()
+        fetchArrivalTubes()
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,5 +46,23 @@ class MapViewController: UIViewController, UICollectionViewDelegate, UICollectio
         guard let stationCell = cell as? TubeStationCollectionViewCell else { return cell }
         
         return stationCell
+    }
+    
+    // MARK: - Private methods
+    
+    private func fetchStations() {
+        
+        TFLFetcher.fetchStations(at: (51.512067, -0.116733), radius: 800) { (response) in
+            
+            print(response)
+        }
+    }
+    
+    private func fetchArrivalTubes() {
+        
+        TFLFetcher.fetchArrivalTubes(for: "940GZZLUTMP") { (response) in
+            
+            print(response)
+        }
     }
 }

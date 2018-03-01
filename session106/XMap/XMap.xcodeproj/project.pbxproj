@@ -16,6 +16,9 @@
 		2B30F28B202B919B00C65D77 /* TubeStationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B30F289202B919B00C65D77 /* TubeStationCollectionViewCell.xib */; };
 		2B30F28F202B98A100C65D77 /* TubeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30F28D202B98A100C65D77 /* TubeLineTableViewCell.swift */; };
 		2B30F290202B98A100C65D77 /* TubeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B30F28E202B98A100C65D77 /* TubeLineTableViewCell.xib */; };
+		2B45941C20472FCF005A08CC /* TFLFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45941B20472FCF005A08CC /* TFLFetcher.swift */; };
+		2B45941E20473DAB005A08CC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45941D20473DAB005A08CC /* Station.swift */; };
+		2B45942020473E28005A08CC /* Tube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45941F20473E28005A08CC /* Tube.swift */; };
 		2BECEE61203DF99000A81F90 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BECEE60203DF99000A81F90 /* Keys.swift */; };
 		2BECEE63203DFACA00A81F90 /* NetworkRequestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BECEE62203DFACA00A81F90 /* NetworkRequestKeys.swift */; };
 		2BECEE65203DFC1100A81F90 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BECEE64203DFC1100A81F90 /* NetworkRequest.swift */; };
@@ -34,6 +37,9 @@
 		2B30F289202B919B00C65D77 /* TubeStationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TubeStationCollectionViewCell.xib; sourceTree = "<group>"; };
 		2B30F28D202B98A100C65D77 /* TubeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeLineTableViewCell.swift; sourceTree = "<group>"; };
 		2B30F28E202B98A100C65D77 /* TubeLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TubeLineTableViewCell.xib; sourceTree = "<group>"; };
+		2B45941B20472FCF005A08CC /* TFLFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLFetcher.swift; sourceTree = "<group>"; };
+		2B45941D20473DAB005A08CC /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		2B45941F20473E28005A08CC /* Tube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tube.swift; sourceTree = "<group>"; };
 		2BECEE60203DF99000A81F90 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2BECEE62203DFACA00A81F90 /* NetworkRequestKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestKeys.swift; sourceTree = "<group>"; };
 		2BECEE64203DFC1100A81F90 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -82,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				2BECEE60203DF99000A81F90 /* Keys.swift */,
-				2BECEE62203DFACA00A81F90 /* NetworkRequestKeys.swift */,
-				2BECEE64203DFC1100A81F90 /* NetworkRequest.swift */,
-				2BECEE66203E054C00A81F90 /* NetworkRequestExecutor.swift */,
+				2B45942120480B23005A08CC /* Network Request */,
+				2B45942220480B2E005A08CC /* Fetchers */,
+				2B45942320480B38005A08CC /* Objects */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +132,33 @@
 				2B30F28D202B98A100C65D77 /* TubeLineTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2B45942120480B23005A08CC /* Network Request */ = {
+			isa = PBXGroup;
+			children = (
+				2BECEE62203DFACA00A81F90 /* NetworkRequestKeys.swift */,
+				2BECEE64203DFC1100A81F90 /* NetworkRequest.swift */,
+				2BECEE66203E054C00A81F90 /* NetworkRequestExecutor.swift */,
+			);
+			path = "Network Request";
+			sourceTree = "<group>";
+		};
+		2B45942220480B2E005A08CC /* Fetchers */ = {
+			isa = PBXGroup;
+			children = (
+				2B45941B20472FCF005A08CC /* TFLFetcher.swift */,
+			);
+			path = Fetchers;
+			sourceTree = "<group>";
+		};
+		2B45942320480B38005A08CC /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2B45941D20473DAB005A08CC /* Station.swift */,
+				2B45941F20473E28005A08CC /* Tube.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +235,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B45941C20472FCF005A08CC /* TFLFetcher.swift in Sources */,
 				2BECEE65203DFC1100A81F90 /* NetworkRequest.swift in Sources */,
 				2BECEE67203E054C00A81F90 /* NetworkRequestExecutor.swift in Sources */,
 				2B30F28A202B919B00C65D77 /* TubeStationCollectionViewCell.swift in Sources */,
 				2B30F28F202B98A100C65D77 /* TubeLineTableViewCell.swift in Sources */,
 				2BECEE63203DFACA00A81F90 /* NetworkRequestKeys.swift in Sources */,
+				2B45942020473E28005A08CC /* Tube.swift in Sources */,
+				2B45941E20473DAB005A08CC /* Station.swift in Sources */,
 				2B30F271202B83ED00C65D77 /* AppDelegate.swift in Sources */,
 				2B30F287202B881F00C65D77 /* MapViewController.swift in Sources */,
 				2BECEE61203DF99000A81F90 /* Keys.swift in Sources */,

@@ -15,4 +15,5 @@ enum Keys: String {
     case naptanMetro = "NaptanMetroStation"
     case mode = "modes"
     case tube = "tube"
+    case radius = "radius"
 }
