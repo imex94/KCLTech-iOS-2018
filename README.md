@@ -1,5 +1,5 @@
 # KCLTech iOS Sessions 2018
-King's College London - KCLTech Society's iOS session with 10 weeks of material in Swift 4.0 and iOS 11. 
+King's College London - KCLTech Society's iOS session with 10 weeks of material in Swift 4.0 and iOS 11.
 
 [KCL Tech Slack (#ios-programming)](https://kcltechhq.slack.com)
 
@@ -38,7 +38,8 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 108 (7th February)
 
-- iOS app - Part 3 - Location
+- [iOS app - Part 3 - Put It Together](session108/XMap)
+- [Assets - Part 2](session108/assets)
 
 ## Session 109 (14th March)
 
