@@ -38,9 +38,5 @@ King's College London - KCLTech Society's iOS session with 10 weeks of material 
 
 ## Session 108 (7th February)
 
-- [iOS app - Part 3 - Put It Together](session108/XMap)
+- [iOS app - Part 3 - XMap v1.0](session108/XMap)
 - [Assets - Part 2](session108/assets)
-
-## Session 109 (14th March)
-
-- iOS app - Part 4 - ARKit
